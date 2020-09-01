@@ -56,8 +56,7 @@ body{
 .show{
   position: absolute;
   z-index: 5;
-  margin-top: 100px;
-  width: 300px;
+
 }
 
 .invisible{
