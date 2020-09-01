@@ -54,29 +54,30 @@ body{
 }
 
 .show{
-  position: absolute;
-  z-index: 5;
-
+  bottom: 170px;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
 }
 
 .invisible{
+  position: absolute;
   display: none;
 }
 
 .containerContainer{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1px;
   list-style: none;
   padding-top: 80px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .cardContainer{
-  border: 2px solid yellow;
+  position: relative;
   height: 300px;
   overflow: hidden;
-  z-index: 1;
   width: 220px;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
