@@ -10,6 +10,7 @@ const $fan = 'https://i.imgur.com/jzBSDgJ.png'
 const $cardContainer = document.querySelector('.cardContainer')
 const $containerContainer = document.querySelector('.containerContainer')
 
+
 const gaang = [
     '5cf5679a915ecad153ab68c9',
     '5cf5679a915ecad153ab6a45',
@@ -38,44 +39,36 @@ function showCharacter(object){
     if(gaang.includes(object.api_id)){
         $li.append($img, $bending)
         $containerContainer.appendChild($li)
-        handleClick($li)
+        handleClick($li, $bending)
     }
 }
 
-function handleClick(card){
-    card.addEventListener('click', bending)
+function handleClick(card, $bending){
+    card.addEventListener('click', () => bending($bending))
 }
 
 
 
-function bending (){
-const $bending = document.querySelector('.invisible')
+function bending ($bending){
     const $character = event.target.alt
     if ($character == 'Aang'){
-        $bending.src = $air
-        $bending.className = 'show'
+        renderElement($bending, $air)
     } else if ($character == 'Katara (games)'){
-        $bending.src = $water
-        $bending.className = 'show'
+        renderElement($bending, $water)
     } else if ($character == 'Sokka'){
-        $bending.src = $boomerang
-        $bending.className = 'show'
+        renderElement($bending, $boomerang)
     } else if ($character == 'Suki'){
-        $bending.src = $fan
-        $bending.className = 'show'
+        renderElement($bending, $fan)
     } else if ($character == 'Zuko (pilot)'){
-        $bending.src = $fire
-        $bending.className = 'show'
+        renderElement($bending, $fire)
     } else if ($character == 'Toph Beifong'){
-        $bending.src = $earth
-        $bending.className = 'show'
+        renderElement($bending, $earth)
     }
 }
 
-
-
-
-// function bending (){
-//     $fan.className = 'show'
-//     setTimeout(() => {$fan.className = 'invisible'}, 2000) 
-// }
+function renderElement (bending, element){
+    bending.src = element
+    bending.className = 'show'
+    setTimeout(() => {bending.className = 'invisible'}, 2000)
+    // $cardContainer.appendChild(bending)
+}

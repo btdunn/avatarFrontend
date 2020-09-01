@@ -62,12 +62,14 @@ h1 {
 }
 
 .show{
-  position: absolute;
-  z-index: 5;
-
+  bottom: 170px;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
 }
 
 .invisible{
+  position: absolute;
   display: none;
 }
 
@@ -77,15 +79,15 @@ h1 {
   grid-column-gap: 1px;
   list-style: none;
   padding-top: 40px;
-  margin-left: 30px;
-  
+  margin-left: 30px;  
 }
 
 .cardContainer{
   border: 10px ridge rgb(185, 198, 216);
   height: auto;
+  position: relative;
+  height: 300px;
   overflow: hidden;
-  z-index: 1;
   width: 220px;
   margin: 50px;
   -webkit-animation-duration: 1s;
