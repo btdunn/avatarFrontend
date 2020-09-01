@@ -28,9 +28,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
+
 ol, ul {
 	list-style: none;
 }
@@ -50,7 +49,16 @@ table {
 /* end meyers reset */
 
 body{
-  background-color: wheat;
+  line-height: 1;
+  background-image: url('https://i.pinimg.com/originals/a1/f4/00/a1f400361e5370a73e9bf22c4ef49a33.png'); 
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+h1 {
+  font-size: 130px;
+  text-align: center;
+  color: rgb(174, 187, 205);
+  -webkit-text-stroke: 2px black; 
 }
 
 .show{
@@ -70,15 +78,18 @@ body{
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1px;
   list-style: none;
-  padding-top: 80px;
-  margin-left: 10px;
+  padding-top: 40px;
+  margin-left: 30px;  
 }
 
 .cardContainer{
+  border: 10px ridge rgb(185, 198, 216);
+  height: auto;
   position: relative;
   height: 300px;
   overflow: hidden;
   width: 220px;
+  margin: 50px;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
